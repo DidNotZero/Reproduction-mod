@@ -1,0 +1,20 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_npc_male_trait",
+    "recurrence": [ "3 seconds", "30 seconds" ],
+    "run_for_npcs": true,
+    "global": true,
+    "condition": "u_male",
+    "effect": [ { "u_add_trait": "PENIS" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_npc_female_trait",
+    "recurrence": [ "3 seconds", "30 seconds" ],
+    "run_for_npcs": true,
+    "global": true,
+    "condition": "u_female",
+    "effect": [ { "u_add_trait": "VAGINA" } ]
+  }
+]
