@@ -17,7 +17,6 @@
       { "skill": "ALL", "level": { "mul": [ { "one_in": 3 }, { "sum": [ { "dice": [ 2, 2 ] }, { "rng": [ -1, -2 ] } ] } ] } },
       { "skill": "survival", "bonus": { "rng": [ 3, 6 ] } },
       { "skill": "cooking", "bonus": { "rng": [ 3, 6 ] } },
-	  { "skill": "lockpick", "bonus": { "rng": [ 3, 6 ] } },
 	  { "skill": "dodge", "bonus": { "rng": [ 3, 6 ] } },
 	  { "skill": "melee", "bonus": { "rng": [ 3, 6 ] } },
 	  { "skill": "cutting", "bonus": { "rng": [ 3, 6 ] } },

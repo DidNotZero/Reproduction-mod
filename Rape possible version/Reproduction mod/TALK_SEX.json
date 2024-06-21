@@ -2,8 +2,7 @@
   {
     "type": "talk_topic",
     "id": "SEX_CONSENSUAL",
-    "dynamic_line": {
-		"and": [
+    "dynamic_line": [
 		"You both strip and embrace each other lovingly, meeting lips as your passions overwhelm you and drive you both to further explore each other's bodies with your hands. The makeout turns into a little tumble but you land safely and giggling ensues as you stare into each other's eyes with a flame of lust that can only be quenched by a feverish bout of ",
 		{
 		"npc_has_trait": "OFFSPRING",
@@ -11,9 +10,8 @@
 		"no": ""
 		},
 		"love-making."
-		]
-	},
-    "responses": [
+	],
+	"responses": [
       {
 	  "text": "[Suck them]",
 	  "topic": "SEX_CON_SUCK",
@@ -39,8 +37,7 @@
   {
     "type": "talk_topic",
     "id": "SEX_RAPE",
-    "dynamic_line": {
-		"and": [
+    "dynamic_line": [
 		"'You can't do this!', they squirm away from your touch. 'I can.', you affirm by forcing them closer and invading their personal space with a groping touch. If civilization was still around you'd probably get locked up for this, but this is the apocalypse and you have needs. ",
 		{
 		"npc_has_trait": "OFFSPRING",
@@ -65,8 +62,7 @@
 		"no": ""
 		},
 		"despite their initial objection while they try not to look into your eyes. 'You're going to regret thi- MmMmph', you cut off their protest by blocking their mouth with yours, making sure they know who's in charge by forcing them into a situation they don't want and making them realise they can't do anything about it. Once you take your tongue out of their mouth they're in a submissive state but refuse to meet your gaze. No matter, they won't need to."
-		]
-	},
+	],
     "responses": [
       {
 	  "text": "[Push their face into your crotch]",
@@ -335,7 +331,7 @@
   {
     "type": "talk_topic",
     "id": "SEX_RAPE_FUCKED_ASS",
-    "dynamic_line": { "and": [
+    "dynamic_line": [
 	"You push them over onto their back and with a hungry look in your eyes expose their shaft to the open air while straddling their lap like an eager rider who can't wait to tame a disobedient horse. 'Please, stop this' they begged. Your reply? No. You wet your fingers with saliva and use them to lubricate your backside before trying to insert their member into but they're not really erect or into the situation enough to make it possible. You can fix that though, and use your already wet fingers to wiggle underneath their squirming body between their legs and insert them far enough to stimulate their prostate. It isn't long before they're hard enough, and you revel in the sensation it provides as you position your behind and press down to feel their cock entering your ass. Once you're comfortable with their presence your start bouncing up and down and masturbating to the face they're making as you force them to do things they don't want to. Eventually though all things must come to and end, as neither of your nerves would have been able to handle it forever, and so they pump their seed inside you and give you the last bit of stimulation you need to get off yourself, covering them in your ",
 	{
 	"u_has_trait": "PENIS",
@@ -343,8 +339,7 @@
 	"no": "feminine juices from your quivering quim "
 	},
 	"as your sphincter spasms around their softening shaft. You'd have let it be inside for longer but it soon becomes too soft and pops out on its own, unplugging your hole and letting their semen flow out. Welp, you got off and that's all that matters. You stand up and prepare to get a move on."
-	]
-	},
+	],
 	"responses": [
       {
 	  "text": "That was fun. Clean yourself up. You're a mess.",

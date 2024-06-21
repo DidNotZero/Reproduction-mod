@@ -8,12 +8,11 @@
     "volume": "6000 ml",
     "price": 100,
     "price_postapoc": 10,
-    "bashing": 1,
-    "cutting": 1,
+    "melee_damage": { "bash": 1, "cut": 1 },
     "material": [ "plastic", "cotton" ],
     "symbol": "@",
     "color": "light_gray",
-    "properties": [ [ "creature_size_capacity", "TINY" ] ],
+    "properties": { "creature_size_capacity": "TINY" },
     "use_action": [ "CAPTURE_MONSTER_ACT" ],
     "flags": [ "TRADER_AVOID" ]
   },
@@ -26,12 +25,11 @@
     "volume": "6000 ml",
     "price": 100,
     "price_postapoc": 10,
-    "bashing": 1,
-    "cutting": 1,
+    "melee_damage": { "bash": 1, "cut": 1 },
     "material": [ "wood", "cotton" ],
     "symbol": "@",
     "color": "yellow",
-    "properties": [ [ "creature_size_capacity", "TINY" ] ],
+    "properties": { "creature_size_capacity": "TINY" },
     "use_action": [ "CAPTURE_MONSTER_ACT" ],
     "flags": [ "TRADER_AVOID" ]
   },
@@ -42,6 +40,7 @@
     "subcategory": "CSC_OTHER_OTHER",
     "skill_used": "fabrication",
     "difficulty": 3,
+    "activity_level": "LIGHT_EXERCISE",
     "time": "3 h",
     "reversible": true,
     "autolearn": true,
@@ -56,6 +55,7 @@
     "skill_used": "fabrication",
     "difficulty": 5,
     "time": "3 h",
+    "activity_level": "LIGHT_EXERCISE",
     "reversible": true,
     "autolearn": true,
     "tools": [
@@ -91,7 +91,6 @@
     "weight": "0 g",
     "volume": "0 ml",
 	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "human_sperm_type": 10 } } ],
-	"max_charges": 10,
 	"charges_per_use": 1,
 	"ammo": "human_sperm_type",
     "use_action": [ {
@@ -105,7 +104,9 @@
     } ],
     "covers": [ "torso" ],
     "warmth": 0,
-    "coverage": 0
+	"armor": [
+      { "covers": [ "torso" ], "coverage": 0, "encumbrance": 0 }
+	]
   },
   {
     "id": "human_pregnancy_item",
@@ -119,8 +120,9 @@
     "volume": "0 ml",
     "covers": [ "torso" ],
     "warmth": 10,
-    "coverage": 25,
-	"encumbrance": 15,
+	"armor": [
+      { "covers": [ "torso" ], "coverage": 25, "encumbrance": 15 }
+	],
 	"max_charges": 9,
     "initial_charges": 9,
 	"turns_per_charge": 2592000,

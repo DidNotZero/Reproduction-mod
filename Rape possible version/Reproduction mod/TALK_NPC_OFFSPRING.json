@@ -2,8 +2,7 @@
   {
     "type": "talk_topic",
     "id": "TALK_NPC_OFFSPRING",
-    "dynamic_line": {
-		"and": [
+    "dynamic_line": [
 		{
 		"u_male": true,
 		"yes": "Hi dad.",
@@ -17,8 +16,7 @@
 		"no": "",
 		"yes": " How've ya been?."
 		}
-		]
-	},
+	],
     "responses": [
       {
 	  "effect": [ { "npc_add_var": "kid_intro_talked", "type": "dialogue", "context": "greet_kid", "value": "yes" }, { "npc_add_effect": "offspring_first_talk", "duration": "PERMANENT" } ],
