@@ -1,0 +1,169 @@
+[
+  {
+    "type": "talk_topic",
+    "id": [ "TALK_FRIEND", "TALK_GIVE_ITEM", "TALK_USE_ITEM", "TALK_RADIO" ],
+    "edit-mode": "append",
+    "responses": [
+      {
+        "text": "Do you think our relationship is ready for the next level?",
+        "trial": { "type": "PERSUADE", "difficulty": 30 },
+        "success": { "topic": "RELATIONSHIP_START_1", "opinion": { "trust": 1, "anger": -1, "value": 1 }, "effect": { "npc_add_effect": "recent_romance_proposal", "duration": 60000 } },
+        "failure": { "topic": "RELATIONSHIP_DENIED", "effect": { "npc_add_effect": "recent_romance_proposal", "duration": 60000 } },
+        "condition": { 
+          "and": [
+            { "not": { "npc_has_var": "ROMANCED", "type": "general", "context": "relationship", "value": "yes" } },
+            { "not": { "npc_has_effect": "recent_romance_proposal" } }
+          ]
+        }
+      },
+      {
+        "text": "Would you like to have some fun?",
+        "topic": "TALK_ALLY_FLIRT",
+        "effect": { "npc_add_effect": "recent_sex_activity", "duration": 6000 },
+        "condition": {
+          "and": [
+            { "not": { "npc_has_var": "ROMANCED", "type": "general", "context": "relationship", "value": "yes" } },
+            { "not": { "npc_has_effect": "recent_sex_activity" } },
+            { "or": [ 
+              { "npc_has_trait": "PENIS" }, 
+              { "npc_has_trait": "VAGINA" }, 
+              { "u_has_trait": "PENIS" }, 
+              { "u_has_trait": "VAGINA" } 
+            ] }
+          ]
+        }
+      },
+      {
+        "text": "Babe?",
+        "topic": "TALK_ALLY_ROMANTIC",
+        "effect": { "npc_add_effect": "recent_romance_activity", "duration": 600 },
+        "opinion": { "trust": 1, "anger": -1, "value": 1 },
+        "condition": {
+          "and": [
+            { "npc_has_var": "ROMANCED", "type": "general", "context": "relationship", "value": "yes" },
+            { "not": { "npc_has_effect": "recent_romance_activity" } }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [ "TALK_ALLY_ORDERS" ],
+    "edit-mode": "override",
+    "dynamic_line": {
+      "npc_has_trait": "OFFSPRING",
+      "yes": [ "What would you like?", "Just say the word." ],
+      "no": [ "I'm all ears, my friend.", "You gonna give me orders?", "What would you like?", "Just say the word." ]
+    },
+    "responses": [
+      {
+        "text": "Can you teach me anything?",
+        "condition": { "not": "is_by_radio" },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "or": [
+              { "npc_need": "thirst", "amount": 80 },
+              { "npc_need": "hunger", "amount": 160 },
+              { "npc_need": "sleepiness", "level": "TIRED" },
+              { "npc_has_effect": "asked_to_train" },
+              { "npc_has_trait": "HALLUCINATION" },
+              "u_driving",
+              "npc_driving"
+            ]
+          }
+        },
+        "success": { "topic": "TALK_DENY_TRAIN" },
+        "failure": { "topic": "TALK_TRAIN_PERSUADE" }
+      },
+      {
+        "text": "Can you host a training seminar?",
+        "condition": { "and": [ { "not": "is_by_radio" }, { "not": { "npc_has_trait": "HALLUCINATION" } } ] },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "or": [
+              { "npc_need": "thirst", "amount": 80 },
+              { "npc_need": "hunger", "amount": 160 },
+              { "npc_need": "sleepiness", "level": "TIRED" },
+              { "npc_has_effect": "asked_to_train" },
+              "u_driving",
+              "npc_driving"
+            ]
+          }
+        },
+        "success": { "topic": "TALK_DENY_TRAIN_SEMINAR" },
+        "failure": { "topic": "TALK_TRAIN_SEMINAR_PERSUADE" }
+      },
+      {
+        "text": "I have something to teach you.",
+        "condition": {
+          "and": [
+            { "not": "u_driving" },
+            { "not": "npc_driving" },
+            { "not": "is_by_radio" },
+            { "not": { "u_has_effect": "asked_to_train" } },
+            { "not": { "npc_has_trait": "HALLUCINATION" } }
+          ]
+        },
+        "topic": "TALK_TRAIN_NPC"
+      },
+      {
+        "text": "Let's trade items.",
+        "condition": { "and": [ { "not": { "npc_has_trait": "HALLUCINATION" } }, { "not": "is_by_radio" } ] },
+        "topic": "TALK_FRIEND",
+        "effect": "start_trade",
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "Let's trade items",
+        "topic": "TRADE_HALLU",
+        "condition": { "npc_has_trait": "HALLUCINATION" },
+        "switch": true,
+        "default": false
+      },
+      {
+        "text": "I want you to use this item.",
+        "condition": { "not": "is_by_radio" },
+        "topic": "TALK_FRIEND",
+        "effect": "npc_gets_item_to_use"
+      },
+      {
+        "text": "Hold on to this item.",
+        "condition": { "not": "is_by_radio" },
+        "topic": "TALK_FRIEND",
+        "effect": "npc_gets_item"
+      },
+      {
+        "text": "Guard this position.",
+        "condition": { "not": "is_by_radio" },
+        "topic": "TALK_FRIEND_GUARD",
+        "effect": "assign_guard"
+      },
+      {
+        "text": "Find a horse and mount up!",
+        "condition": { "and": [ { "not": "npc_is_riding" }, { "not": { "npc_has_trait": "HALLUCINATION" } } ] },
+        "topic": "TALK_DONE",
+        "effect": "find_mount"
+      },
+      {
+        "text": "Drop off any items you're not using.",
+        "condition": { "and": [ { "not": "is_by_radio" }, { "not": { "npc_has_trait": "HALLUCINATION" } } ] },
+        "topic": "TALK_DONE",
+        "effect": "drop_items_in_place"
+      },
+      {
+        "text": "Get off your mount, please.",
+        "condition": "npc_is_riding",
+        "topic": "TALK_DONE",
+        "effect": "dismount"
+      },
+      { "text": "Let's talk about your current activity.", "topic": "TALK_ACTIVITIES" },
+      { "text": "Let's talk about the camp.", "topic": "TALK_CAMP" },
+      { "text": "Change your martial arts style.", "topic": "TALK_DONE", "effect": "pick_style" },
+      { "text": "<lets_go>", "topic": "TALK_DONE" }
+    ]
+  }
+]
