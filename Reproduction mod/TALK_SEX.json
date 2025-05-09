@@ -233,8 +233,7 @@
     "responses": [
       {
       "text": "This was nice.",
-      "topic": "SEX_CON_DONE",
-      "effect": { "u_buy_item": "human_ovum", "count": 1 }
+      "topic": "SEX_CON_DONE"
       }
     ]
   },
@@ -245,8 +244,7 @@
     "responses": [
       {
       "text": "This was nice.",
-      "topic": "SEX_CON_DONE",
-      "effect": { "u_buy_item": "human_sperm", "count": 10 }
+      "topic": "SEX_CON_DONE"
       }
     ]
   },
@@ -290,8 +288,7 @@
     "responses": [
       {
       "text": "That was fun. Clean yourself up. You're a mess.",
-      "topic": "SEX_RAPE_DONE",
-      "effect": { "u_buy_item": "human_ovum", "count": 1 }
+      "topic": "SEX_RAPE_DONE"
       }
     ]
   },
@@ -313,8 +310,7 @@
     "responses": [
       {
       "text": "That was fun. Clean yourself up. You're a mess.",
-      "topic": "SEX_RAPE_DONE",
-      "effect": { "u_buy_item": "human_sperm", "count": 10 }
+      "topic": "SEX_RAPE_DONE"
       }
     ]
   },
