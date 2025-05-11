@@ -1,0 +1,8 @@
+[
+  {
+    "type": "morale_type",
+    "id": "morale_afterglow",
+    "text": "Feeling content and satisfied after a pleasant encounter.",
+    "bonus": 1
+  }
+]

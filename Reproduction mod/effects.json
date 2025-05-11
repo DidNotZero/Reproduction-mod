@@ -16,5 +16,29 @@
     "id": "recent_romance_activity",
     "name": [ "Recent romantic activity" ],
     "desc": [ "Temporary AI tag for if you've recently enganged in a romantic activity with an npc. This is a bug if you have it." ]
+  },
+  {
+    "type": "effect_type",
+    "id": "flirted_successfully",
+    "name": [
+      "Feeling Good",
+      "Feeling Good"
+    ],
+    "desc": [
+      "You're feeling pretty good about that recent interaction."
+    ],
+    "rating": "good",
+    "apply_message": "You feel a warmth spread through you.",
+    "remove_message": "The warm feeling fades.",
+    "max_intensity": 1
+  },
+  {
+    "type": "effect_type",
+    "id": "recently_had_sex",
+    "name": [ "Physically Intimate Recently" ],
+    "desc": [ "You've recently been physically intimate." ],
+    "rating": "neutral",
+    "max_intensity": 1,
+    "show_in_info": true
   }
 ]

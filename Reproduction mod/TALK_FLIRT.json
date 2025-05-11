@@ -17,10 +17,56 @@
   {
     "type": "talk_topic",
     "id": "TALK_ALLY_FLIRT_REALISE",
+    "dynamic_line": "You mean... right now?",
     "responses": [
       {
         "text": "Oh! That... um...",
         "topic": "TALK_ALLY_FLIRT_REALISE_2"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ALLY_FLIRT_ACCEPT",
+    "dynamic_line": "Alright then. I was hoping you'd say that.",
+    "responses": [
+      {
+        "text": "(Let the fun begin...)",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "npc_add_effect": "flirted_successfully", "duration": "1h" },
+          { "u_add_effect": "flirted_successfully", "duration": "1h" },
+          { "u_add_morale": "morale_flirted_success", "bonus": 5, "duration": "1h", "max_bonus": 10, "decay_start": "30m" },
+          { "run_eoc": "EOC_REPRODUCTION_MOD_SEX_SCENE" }
+        ],
+        "opinion": { "trust": 2, "value": 3 }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ALLY_FLIRT_DENY_PLAYER",
+    "dynamic_line": "Oh. A bit of a tease, are we? That's alright, maybe another time.",
+    "responses": [
+      {
+        "text": "Yeah, sorry about that.",
+        "topic": "TALK_DONE",
+        "opinion": { "trust": -1, "value": -1 }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ALLY_FLIRT_REALISE_2",
+    "dynamic_line": "Well? Are you in or not?",
+    "responses": [
+      {
+        "text": "I'm in!",
+        "topic": "TALK_ALLY_FLIRT_ACCEPT"
+      },
+      {
+        "text": "Actually, I've changed my mind.",
+        "topic": "TALK_ALLY_FLIRT_DENY_PLAYER"
       }
     ]
   },

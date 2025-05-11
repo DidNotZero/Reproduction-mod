@@ -8,6 +8,17 @@
     "description": "Adds the ability to have sexual and romantic interactions with NPCs.",
     "category": "content",
     "dependencies": [ "dda" ],
+    "json": [
+      "effects.json",
+      "eocs.json",
+      "mod_talk_romance.json",
+      "mutations.json",
+      "starting_traits.json",
+      "TALK_FLIRT.json",
+      "TALK_ROMANCE.json",
+      "TALK_SEX.json",
+      "morale_types.json"
+    ],
 	"obsolete": false
   }
 ]

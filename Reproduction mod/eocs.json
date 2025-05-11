@@ -1,0 +1,46 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_REPRODUCTION_MOD_SEX_SCENE",
+    "effect": [
+      {
+        "u_message": "You and <npc_name> find a private moment...",
+        "type": "good",
+        "popup": true
+      },
+      {
+        "u_message": "Time passes in a blur of shared intimacy."
+      },
+      {
+        "u_add_effect": "recently_had_sex",
+        "duration": "3h"
+      },
+      {
+        "npc_add_effect": "recently_had_sex",
+        "duration": "3h"
+      },
+      {
+        "u_add_morale": "morale_afterglow",
+        "bonus": 15,
+        "duration": "4h",
+        "max_bonus": 30
+      },
+      {
+        "npc_add_morale": "morale_afterglow",
+        "bonus": 15,
+        "duration": "4h",
+        "max_bonus": 30
+      },
+      {
+        "u_add_effect": "fatigue",
+        "duration": "1h",
+        "intensity": 1
+      },
+      {
+        "npc_add_effect": "fatigue",
+        "duration": "1h",
+        "intensity": 1
+      }
+    ]
+  }
+]
